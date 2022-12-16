@@ -1,0 +1,24 @@
+<div class="container main-container">
+
+  <button class="btn btn-primary mr-3 mb-5" [routerLink]="['/home']">Voltar</button>
+  <button class="btn btn-success mr-3 mb-5" [routerLink]="['/']">Chamar Próxima</button>
+  <div class="row">
+    <div class="col">
+      <h1>Guichês</h1>
+
+      <div *ngFor="let guiche of guiches" class="column text-center">
+        <ol class="list-group list-group-numbered">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">{{guiche.nome}}</div>
+            </div>
+            <a class="btn btn-primary" routerLinkActive="router-link-active" [routerLink]="['/guiche-detalhe']" style="cursor: pointer;">
+              <span class="fa fa-ticket"></span> Selecionar
+            </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>

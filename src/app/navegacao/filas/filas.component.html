@@ -1,0 +1,25 @@
+<div class="container main-container">
+
+
+  <button class="btn btn-primary mb-5 " [routerLink]="['/home']">Voltar</button>
+  <div class="row">
+    <div class="col">
+      <h1>Filas</h1>
+      
+      <div *ngFor="let fila of filas" class="column text-center">
+        <ol class="list-group list-group-numbered">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">{{fila.nome}}</div>
+            </div>
+            <a class="btn btn-primary" [routerLink]="['/fila-detalhe']" routerLinkActive="router-link-active"
+              style="cursor: pointer;">
+              <span class="fa fa-ticket"></span>Selecionar
+            </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+  </div>
+</div>
